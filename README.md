@@ -1,5 +1,5 @@
 # Web-Design-Class-Group-Project
-
+# VisitEthiopia - a website that advertizes tourism in ethiopia  
 GROUP MEMBERS 
 1. Amanuel Belete	        UGR/7564/13	  SECTION 2
 2. Ayan Abas	            UGR/0999/13	  SECTION 2
