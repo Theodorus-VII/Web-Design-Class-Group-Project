@@ -21,4 +21,14 @@ model User{
   name String?
   nationality String?
   age Int?
+  avatars Avatars?
+}
+
+model Avatars{
+  idA Int @id @default(autoincrement())
+  // userID Int  @relation(fields: [id], references: [id])
+  imglink String
+
+  userId Int @unique
+  user User @relation(fields: [userId], references: [id])
 }
