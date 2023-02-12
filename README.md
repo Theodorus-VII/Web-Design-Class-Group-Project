@@ -1,3 +1,18 @@
+# Web-Design-Class-Group-Project
+# VisitEthiopia 
+        - a website that advertizes tourism in ethiopia  
+GROUP MEMBERS 
+1. Amanuel Belete	        UGR/7564/13	  SECTION 2
+2. Ayan Abas	            UGR/0999/13	  SECTION 2
+3. Dawit Getahun	        UGR/9220/13	  SECTION 1
+4. Tewodros Berhanu	      UGR/9715/13	  SECTION 2
+5. Yohannes Habtamu	      UGR/1581/13	  SECTION 2	
+
+The project utilizes prisma for database query processing and docker for running PostgresSQL on a personal computer. However, the bootstrap implementation is not complete and some features are not functional. Despite this, the server-side component is functioning well and is able to authenticate users using JWT and provide full CRUD capabilities for user management(the server can handle creating user accounts, reading and updating user information, and deleting user accounts) and profile picture/avatars(uploading, deleting, loading). Despite not having enough time to fully integrate the second feature with the front-end, it is working as intended on the back-end. The second feature works well with clientss like POSTMAN or INSOMNIA.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
