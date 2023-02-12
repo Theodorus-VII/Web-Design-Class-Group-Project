@@ -9,29 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PrismaService = void 0;
-const common_1 = require("@nestjs/common");
-const dist_1 = require("@nestjs/config/dist");
-const client_1 = require("@prisma/client");
-let PrismaService = class PrismaService extends client_1.PrismaClient {
-    constructor(config) {
-        super({
-            datasources: {
-                db: {
-                    url: config.get('DATABASE_URL')
-                },
-            },
-        });
-    }
-    cleanDb() {
-        return this.$transaction([
-            this.user.deleteMany()
-        ]);
-    }
-};
-PrismaService = __decorate([
-    (0, common_1.Injectable)(),
-    __metadata("design:paramtypes", [dist_1.ConfigService])
-], PrismaService);
-exports.PrismaService = PrismaService;
-//# sourceMappingURL=prisma.service.js.map
+exports.ModUserDto = void 0;
+const class_validator_1 = require("class-validator");
+class ModUserDto {
+}
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], ModUserDto.prototype, "name", void 0);
+__decorate([
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Number)
+], ModUserDto.prototype, "age", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], ModUserDto.prototype, "nationality", void 0);
+exports.ModUserDto = ModUserDto;
+//# sourceMappingURL=modify-user.dto.js.map

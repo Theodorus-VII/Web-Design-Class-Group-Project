@@ -67,10 +67,10 @@ let AuthService = class AuthService {
         };
         const secret = this.config.get("JWT_SECRET");
         const access_token = await this.jwt.signAsync(data, {
-            expiresIn: '10m',
             secret
         });
         return {
+            user_id: id,
             access_token: access_token
         };
     }

@@ -8,21 +8,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
-const app_controller_1 = require("./app.controller");
-const app_service_1 = require("./app.service");
 const prisma_module_1 = require("./prisma/prisma.module");
 const auth_module_1 = require("./auth/auth.module");
 const user_module_1 = require("./user/user.module");
 const config_1 = require("@nestjs/config");
+const avatars_controller_1 = require("./avatars/avatars.controller");
+const avatars_service_1 = require("./avatars/avatars.service");
+const cors = require("cors");
 let AppModule = class AppModule {
+    configure(consumer) {
+        consumer.apply(cors({ origin: 'http://127.0.0.1:5500' })).forRoutes('*');
+    }
 };
 AppModule = __decorate([
     (0, common_1.Module)({
         imports: [prisma_module_1.PrismaModule, auth_module_1.AuthModule, user_module_1.UserModule, config_1.ConfigModule.forRoot({
                 isGlobal: true,
             })],
-        controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService],
+        controllers: [avatars_controller_1.AvatarsController],
+        providers: [avatars_service_1.AvatarsService],
     })
 ], AppModule);
 exports.AppModule = AppModule;
