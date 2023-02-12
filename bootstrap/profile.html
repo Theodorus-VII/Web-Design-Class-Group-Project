@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <!-- fontawesome kit code -->
+    <script src="https://kit.fontawesome.com/edb6ed9f7f.js" crossorigin="anonymous"></script>
+    <!-- css links -->
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="container p-5 d-flex w-75">
+        <div class="row d-flex">
+            <div class="col-6 d-flex flex-column justify-content-center align-items-baseline">
+                <img class="w-25" id="profilePic" src="imgs/default-avi-pfp.png" alt="profile picture">
+                <form class="d-flex flex-column">
+                    <input type="file" accept="image/*" id="pfpic" class="btn"  aria-label="Profile-Pic-Submit">
+                    <input type="submit" class="my-1 btn text-bg-dark w-50" onclick = "addProfilePicture()" aria-label="submit">
+                </form>
+            </div>
+            <div class="col-6 d-flex flex-column justify-content-center align-items-baseline">
+                <div id="welcome-plus-name">Welcome, <span class="fw-bold" id="user-name"></span> !</div>
+                <div>Edit and manage your profile</div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="container">
+        <div class="row d-flex flex-column justify-content-center align-items-center p-5">
+            <div class="offset-md-1 col-md-8 offser-md-0 col-12 justify-content-center shadow p-3 me-3 mb-5 bg-white">
+                <div>My Profile</div>
+                <br>
+                <form id="update-Info-form" class="ps-5" action="">
+                    <div>
+                        <label class="form-label" for="change-name">Name* : </label>
+                        <input class="form-control form-control-sm" type="text" id="change-name" name="change-name">
+                    </div> <br>
+                    <div>
+                        <label class="form-label" for="change-nationality">Nationality : </label>
+                        <input class="form-control form-control-sm" type="text" name="change-nationality" id="change-nationality">
+                    </div>
+                     <br>
+                    <div>
+                        <label class="form-label" for="change-age">Age* : </label>
+                        <input class="form-control form-control-sm" type="number" name="change-age" id="change-age" min="18">
+                    </div>
+                     <br>
+                    <!-- <div>
+                        <label class="form-label" for="change-email">Email* : </label>
+                        <input class="form-control form-control-sm" type="email" name="change-email" id="change-email" required> 
+                    </div> -->
+                     <br>
+                    
+                    <br>
+                    <br>
+                    <!-- onclick="validateUserInfoChange()" -->
+                    <button class="btn btn-dark" type="submit" >Save</button>
+                    <button class="btn btn-dark" type="reset">Discard</button>
+                </form>
+                <br>
+                
+            </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container p-5">
+        <div class="row">
+            <div class="col d-flex justify-content-center align-items-center">
+                <form action="home.html">
+                    <button class="btn btn-primary return-button">Return</button>
+                </form>
+                
+                <button class="btn btn-secondary ms-3" id="log-out-button">Log-out</button>
+                <button class="btn btn-secondary ms-3" id="delete-account">Delete Account</button>
+            </div>
+    
+        </div>
+        
+    </div>
+    <script src="./js/index.js"></script>
+    <script src="./js/changes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign - in</title>
+    <!-- fontawesome kit code -->
+    <script src="https://kit.fontawesome.com/edb6ed9f7f.js" crossorigin="anonymous"></script>
+    <!-- css link -->
+    <link rel="stylesheet" href="../bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5 align-middle">
+        <div class="row">
+            <div class="form-box col-md-5 p-5 col offset-md-1 border">
+                <div class="form">
+                    
+                    <div class="form-head">
+                        <h3>Welcome Back!</h3>
+                        <div>Please enter your details</div>
+                    </div>
+                    
+                    
+                    <br>
+                    
+                    <form id="sign-in-form">
+                        <div>
+                            <label class="form-label" for="sign-in-email">Email</label><br>
+                            <input class="form-control form-control-sm" type="email" id="sign-in-email" name="sign-in-email" placeholder="Enter Your Email" required>
+                        </div><br>
+                        <div>
+                            <label class="form-label" for="sign-in-password">Password</label><br>
+                            <input class="form-control form-control-sm" type="password" id="sign-in-password" name="sign-in-password" required><br>
+                            <span id="forgot-password"><u>forgot password?</u></span>
+                        </div>
+                        <br>
+                        <button class="btn w-100" style="color: white; background-color: rgb(43,53,93);" type="submit" >
+                            <span class="fw-bold">Sign in</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="with-google">
+                    <div><hr></div>
+                    <div class="or-txt">Or</div>
+                    <button class="btn btn-outline w-100" style="border-color: rgb(43,53,93);">
+                        <span class="fw-bold" style="color: rgb(43,53,93);">Sign in with Google</span>
+                    </button>
+                    <div class="sign-up-option">Don't have an account? <a href="sign-up.html"><u>Sign up</u></a></div>
+    
+                </div>
+            </div>
+            <div class="col-lg-4 border d-lg-flex d-none" style="background-color: rgb(43,53,93);">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <a class="text-light text-decoration-none display-5 fw-bold" href="home.html">VisitEthiopia</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    <!-- removed audio out of div -->
+    <div class="audio">
+        <audio src="../audio/Ice & Fire - King Canyon.mp3" controls autoplay muted loop>
+        </audio>
+    </div>
+    <script src="../js/index.js"></script>
+    <script src="../bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script>
+    
+    
+</body>
+
+</html>

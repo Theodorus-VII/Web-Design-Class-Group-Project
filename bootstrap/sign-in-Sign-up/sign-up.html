@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-up</title>
+    <!-- fontawesome kit code -->
+    <script src="https://kit.fontawesome.com/edb6ed9f7f.js" crossorigin="anonymous"></script>
+    <!-- css link -->
+    <link rel="stylesheet" href="../bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <div class="container mt-5 align-middle ">
+        <div class="row">
+            <div class="form-box col-md-5 p-5 col offset-md-1 shadow p-3 mb-5 bg-white">
+                <div class="form">
+                    
+                    <div class="form-head">
+                        <h3>Get Started!</h3>
+                    </div>
+                    
+                    <form id="sign-up-form" >
+                        
+                        <br>
+                        <div>
+                            <label class="form-label" for="sign-up-name">Name*</label><br>
+                            <input class="form-control form-control-sm" type="text" name="sign-up-name" id="sign-up-name" required>
+                        </div><br>
+                        <div>
+                            <label class="form-label" for="sign-up-email">Email*</label><br>
+                            <input class="form-control form-control-sm" type="email" id="sign-up-email" name="sign-up-email" placeholder="Enter Your Email" required>
+                        </div><br><br>
+                        <div class="d-flex flex-column justify-content-center">
+                            <label class="form-label" for="sign-up-password">Password*</label><br>
+                            <input class="form-control form-control-sm pb-0 mb-0" type="password" id="sign-up-password" name="sign-up-password" minlength="8"><br>
+                            
+                            <span id="password-requirement" class="pt-0 mt-0">must be atleast 8 characters</span>
+                        </div><br>
+                        
+                        <div class="confirm-div">
+                            <label class="form-label" for="confirm-password">Confirm Password*</label><br>
+                            <input class="form-control form-control-sm" type="password" id="confirm-password" name="confirm-password">
+                            
+                            <div id="password-mismatch"></div>
+                        </div><br>
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="agree-to-terms" id="agree-to-terms">
+                            <label class="form-check" for="agree-to-terms">Agree to terms of service and privacy</label>
+                        </div><br>
+                        <div id="error-output"></div><br>
+                        
+                        <button class="btn w-100" style="color: white; background-color: rgb(43,52,93);" onclick="validateSignUp()" type="submit">
+                            <span class="fw-bold">Sign up</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="with-google">
+                    <div><hr></div>
+                    <div class="or-txt">Or</div>
+                    <button class="btn btn-outline-secondary w-100">
+                        <span class="fw-bold">Sign up with Google</span>
+                    </button>
+                    <div class="sign-in-option">Already have an account? <a href="sign-in.html"><u>Sign in</u></a></div>
+    
+                </div>
+            </div>
+            <div class="col-lg-4 border d-lg-flex d-none shadow p-3 mb-5" style="background-color: rgb(43,52,93);">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <a class="text-light text-decoration-none display-5 fw-bold" href="home.html">VisitEthiopia</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    <!-- moved out -->
+    <div class="audio">
+        <audio src="../audio/Ice & Fire - King Canyon.mp3" controls autoplay muted loop>
+        </audio>
+    </div>
+    <script>
+        const form = document.querySelector("form")
+
+        form.addEventListener('submit', e=>{
+            if (!form.checkValidity()){
+                e.preventDefault()
+            }
+            form.classList.add('was-validated')
+        })
+    </script>
+    <script src="../bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script>
+    <script src="../js/index.js"></script>
+    
+</body>
+</html>

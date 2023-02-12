@@ -1,0 +1,61 @@
+
+.contact-us-imgs{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 92vw;
+    height: 50%;
+    align-items: center;
+    overflow: hidden;
+
+}
+.slider-frame{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+
+}
+.slide-imgs{
+    width: 300%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideshow 10s infinite;
+    animation-direction: alternate;
+
+}
+
+
+.how-to-contact{
+    font-size: large;
+    color: rgb(43,52,93);
+    font-weight: bold;
+}
+.contact-title{
+    font-size: medium;
+    color: rgb(43,52,93);
+    font-weight: bold;
+}
+
+
+
+@keyframes slideshow{
+    0%{
+        margin-left: 0%;
+    }
+    33%{
+        margin-left: 0%;
+    }
+    66%{
+        margin-left: -100%;
+    }
+    100%{
+        margin-left: -200%;
+    } 
+}
+.img-container img{
+    height: 50.625vw;
+    width: 87vw;
+}
