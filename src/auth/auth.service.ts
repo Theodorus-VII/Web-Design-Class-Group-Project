@@ -1,6 +1,6 @@
 import { ForbiddenException, Injectable } from "@nestjs/common";
 import { User } from "@prisma/client";
-import { PrismaService } from "src/prisma/prisma.service";
+import { PrismaService } from "../prisma/prisma.service";
 import { AuthDto } from "./dto";
 import * as argon from 'argon2';
 // import { PrismaClientKnownRequestError } from "@prisma/client/runtime";
@@ -75,12 +75,13 @@ export class AuthService {
         const secret = this.config.get("JWT_SECRET");
 
         const access_token = await this.jwt.signAsync(data, {
-            expiresIn: '10m',
+            // expiresIn: '90m',
             secret
         })
 
         // console.log(access_token)
         return {
+            user_id: id,
             access_token: access_token
         };
     }
