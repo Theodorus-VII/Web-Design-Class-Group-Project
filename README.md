@@ -16,6 +16,9 @@ prisma commands
 
 You can also see additional commands on the package.json file
 
+INSTALL MODULES WITH YARN INSTALL
+HTML SHOULD BE RUN ON A LIVE SERVER ON THE SAME PORT NUMBER AS THE NESTJS SERVER(5500)
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <p align="center">
