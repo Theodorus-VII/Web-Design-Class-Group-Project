@@ -10,6 +10,11 @@ GROUP MEMBERS
 
 The project utilizes prisma for database query processing and docker for running PostgresSQL on a personal computer. However, the bootstrap implementation is not complete and some features are not functional. Despite this, the server-side component is functioning well and is able to authenticate users using JWT and provide full CRUD capabilities for user management(the server can handle creating user accounts, reading and updating user information, and deleting user accounts) and profile picture/avatars(uploading, deleting, loading). Despite not having enough time to fully integrate the second feature with the front-end, it is working as intended on the back-end. The second feature works well with clientss like POSTMAN or INSOMNIA.
 
+prisma commands
+-npx prisma migrate
+-npx prisma generate
+
+You can also see additional commands of the package.json file
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
