@@ -32,13 +32,28 @@ export class AvatarsController {
 
     // return pf pic
     // READ
+    // @Get()
+    // async getAvatar(@GetUser('id') user: User, @Res() res) {
+    //     let userId = user.id;
+    //     const x = this.avatarsService.getAvatar(userId)
+    //     try{
+    //         const ret = (await x).imglink
+    //         console.log(ret)
+    //         // console.log(of(res.sendFile(join(process.cwd(), 'uploads/'+ret))))
+    //         return ({ imagePath: ret});
+    //     } catch(error){
+    //         return ("data not found")
+    //     }
+    // }
+
     @Get()
-    async getAvatar(@GetUser('id') user: User, @Res() res) {
+    async getAvatar(@GetUser('id') user: User) {
         let userId = user.id;
         const x = this.avatarsService.getAvatar(userId)
         try{
             const ret = (await x).imglink
-            return of(res.sendFile(join(process.cwd(), 'uploads/'+ret)))
+            console.log(ret)
+            return ({ imagePath: ret});
         } catch(error){
             return ("data not found")
         }

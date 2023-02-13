@@ -22,20 +22,25 @@ export class AvatarsService {
 
     // create pf picture. just registers it to the database
     async setAvatar(imglink: string, user: User, userId: number) {
-        try{
-        const avatar = await this.prisma.avatars.create({
-            data: {
-                userId,
-                imglink,
-            },
-        });
-        return avatar
-    } catch (error){
-        
-    }
+        try {
+            const avatar = await this.prisma.avatars.create({
+                data: {
+                    userId,
+                    imglink,
+                },
+            });
+            return avatar
+        } catch (error) {
+            try {
+                this.deleteAvatar(userId)
+                this.setAvatar(imglink, user, userId)
+
+            } catch{}
+        }
     }
 
     async deleteAvatar(userId: number) {
+        console.log("delete")
         const avatar = this.prisma.avatars.findUnique({
             where: {
                 userId
@@ -54,7 +59,7 @@ export class AvatarsService {
                 return
             }
         } catch (error) {
-            throw new ForbiddenException(
+            console.log(
                 'Access to resource denied'
             );
         }
