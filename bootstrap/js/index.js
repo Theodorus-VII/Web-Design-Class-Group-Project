@@ -114,7 +114,7 @@ async function validateSignIn(e) {
     })
     const data = await response.json();
     alert(response.status)
-            if (response.status === 201) {
+            if (response.status === 200) {
                 // Store the JWT in a cookie
                 //document.cookie = `jwt=${data.token}; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/;`;
                 // Redirect to the "home.html" page
@@ -194,9 +194,11 @@ async function getProfilePicture() {
         redirect: 'follow',
         referrerPolicy: 'no-referrer',
     })
-    const data = await response.body;
+    const data = await response.json();
+    console.log(data)
 
-    document.getElementById('profilePic').src = ""
+    // tag = "<img src=''>"
+    document.getElementById('profilePic').src = "../uploads/" + data.imagePath
     // alert(data)
 }
 
