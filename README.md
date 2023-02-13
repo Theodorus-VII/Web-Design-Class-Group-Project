@@ -14,7 +14,7 @@ prisma commands
 -npx prisma migrate
 -npx prisma generate
 
-You can also see additional commands of the package.json file
+You can also see additional commands on the package.json file
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
